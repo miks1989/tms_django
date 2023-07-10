@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+
+{% block title %} show groups {% endblock %}
+
+
+{% block content%}
+<h1>список групп</h1>
+    {% for group in groups%}
+        <h3>{{ group.name }}</h3>
+    {% endfor %}
+{% endblock %}
