@@ -1,0 +1,12 @@
+{% extends "main1.html" %}
+
+{% block title %} catdog {% endblock %}
+
+
+{% block content%}
+<form action="{% url 'catdog'%}" method="post">
+    <button type="submit" name="cat" class="btn btn-outline-warning">i love cats</button>
+
+    <button type="submit" name="dog" class="btn btn-outline-warning">i love dogs</button>
+</form>
+{% endblock %}

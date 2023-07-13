@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django_extensions',
     'app1',
     'app2',
-    'school'
+    'school',
+    'catdog',
+    'bootstrap5',
 
 ]
 

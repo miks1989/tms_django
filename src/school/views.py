@@ -5,7 +5,7 @@ from school.models import Group, Student
 
 def all_groups_view(request):
     data_dict_with_groups = Group.objects.all()
-    return render(request, 'groups.html',
+    return render(request, 'catdog.html',
                   context={'groups': data_dict_with_groups})
 
 
