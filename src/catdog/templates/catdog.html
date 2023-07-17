@@ -4,10 +4,12 @@
 
 
 {% block content%}
+<div class="jumbotron text-center big">
 <form action="{% url 'catdog'%}" method="post">
     {% csrf_token %}
     <button type="submit" name="cat" class="btn btn-outline-warning">i love cats</button>
 
     <button type="submit" name="dog" class="btn btn-outline-warning">i love dogs</button>
 </form>
+</div>
 {% endblock %}
