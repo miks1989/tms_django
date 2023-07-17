@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.urls import path
 
-from catdog.views import catdog_view
+from catdog.views import catdog_view, save_catdog
 from school.views import all_groups_view, all_students_of_the_group
 
 urlpatterns = [
     path('', catdog_view,
          name='catdog'),
+    path('save_catdog', save_catdog,
+         name='save_catdog'),
 ]

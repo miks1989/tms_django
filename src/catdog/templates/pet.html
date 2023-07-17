@@ -8,5 +8,12 @@
 
 <img src="{{ url }}" class="rounded-circle" alt="Cinque Terre">
 
+<form action="{% url 'save_catdog'%}" method="post">
+    {% csrf_token %}
+    <button type="submit" name="pet" class="btn btn-outline-warning">SAVE this image</button>
+
+
+</form>
+
 
 {% endblock %}
