@@ -1,0 +1,20 @@
+{% extends "main1.html" %}
+
+{% block title %} catdog {% endblock %}
+
+
+{% block content%}
+<H1>лови рандомную картинку</H1>
+
+<img src="{{ url }}" class="rounded-circle" alt="Cinque Terre">
+
+<h2>image saved</h2>
+
+<form action="{% url 'send_mail'%}" method="post">
+    {% csrf_token %}
+    <h3>inter email for send</h3>
+    <input type="email" name="mail">
+    <button type="submit" name="pet" class="btn btn-outline-warning">send link to this image</button>
+</form>
+
+{% endblock %}

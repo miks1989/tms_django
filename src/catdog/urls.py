@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.urls import path
 
-from catdog.views import catdog_view, save_catdog
+from catdog.views import catdog_view, save_catdog, send_image_to_email
 from school.views import all_groups_view, all_students_of_the_group
 
 urlpatterns = [
     path('', catdog_view,
          name='catdog'),
-    path('save_catdog', save_catdog,
+    path('save_catdog123456', save_catdog,
          name='save_catdog'),
+    path('send_mail', send_image_to_email,
+         name='send_mail'),
 ]
