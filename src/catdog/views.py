@@ -2,10 +2,11 @@ import datetime
 
 import requests
 from django.core.mail import send_mail
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from catdog.models import AnimalImage
-from src.settings import URL_FOR_CATS, URL_FOR_DOGS
+from src.settings import URL_FOR_CATS, URL_FOR_DOGS, EMAIL_HOST_USER
 
 
 def catdog_view(request):
@@ -58,7 +59,8 @@ def send_image_to_email(request):
     send_mail(
         "Subject here",
         "Here is the message.",
-        "from@example.com",
+        EMAIL_HOST_USER,
         ["miks1@yandex.ru"],
         fail_silently=False,
     )
+    return HttpResponse('email sended')
