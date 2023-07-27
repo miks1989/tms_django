@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.urls import path
 
-from catdog.views import catdog_view, save_catdog, send_image_to_email
+from catdog.views import catdog_view, save_catdog, send_image_to_email, pet_filter
 from school.views import all_groups_view, all_students_of_the_group
 
 urlpatterns = [
@@ -26,4 +26,6 @@ urlpatterns = [
          name='save_catdog'),
     path('send_mail', send_image_to_email,
          name='send_mail'),
+    path('pet_filter', pet_filter,
+         name='pet_filter'),
 ]

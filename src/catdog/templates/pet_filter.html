@@ -1,0 +1,16 @@
+{% extends "main1.html" %}
+
+{% block title %} show saved pets {% endblock %}
+
+
+{% block content%}
+<H1>список сохраненных картинок</H1>
+
+{% for pet in pets %}
+    <p><a href="{{ pet.url }}">{{ pet.url }}</a></p>
+    <img src="{{ pet.url }}" class="rounded-circle"
+     alt="Cinque Terre" height="100">
+{% endfor %}
+
+
+{% endblock %}

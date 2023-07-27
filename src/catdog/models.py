@@ -1,6 +1,5 @@
 from django.db import models
 
-[('cat', 'Cat'), ('dog', 'Dog')]
 
 class AnimalImage(models.Model):
     CHOICES_SP = [('cat', 'Kitten'), ('dog', 'Dog')]
@@ -17,3 +16,6 @@ class AnimalImage(models.Model):
         max_length=5,
         choices=CHOICES_TP,
     )
+
+    def __str__(self):
+        return self.url

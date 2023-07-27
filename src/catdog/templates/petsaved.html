@@ -6,7 +6,7 @@
 {% block content%}
 <H1>лови рандомную картинку</H1>
 
-<img src="{{ url }}" class="rounded-circle" alt="Cinque Terre">
+<img src="{{ url }}" class="rounded-circle" alt="Cinque Terre" height="200">
 
 <h2>image saved</h2>
 
@@ -14,7 +14,7 @@
     {% csrf_token %}
     <h3>inter email for send</h3>
     <input type="email" name="mail">
-    <button type="submit" name="pet" class="btn btn-outline-warning">send link to this image</button>
+    <button type="submit" name="url_for_image" value="{{ url }}" class="btn btn-outline-warning">send link to this image</button>
 </form>
 
 {% endblock %}

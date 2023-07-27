@@ -135,5 +135,5 @@ URL_FOR_DOGS = 'https://dog.ceo/api/breeds/image/random'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'makstester3@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'unneeseffdzgncki'
 EMAIL_USE_SSL = True

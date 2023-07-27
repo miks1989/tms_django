@@ -5,11 +5,22 @@
 
 {% block content%}
 <div class="jumbotron text-center big">
-<form action="{% url 'catdog'%}" method="post">
-    {% csrf_token %}
-    <button type="submit" name="cat" class="btn btn-outline-warning">i love cats</button>
+    <form action="{% url 'catdog'%}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="cat" class="btn btn-outline-warning">i love cats</button>
 
-    <button type="submit" name="dog" class="btn btn-outline-warning">i love dogs</button>
-</form>
+        <button type="submit" name="dog" class="btn btn-outline-warning">i love dogs</button>
+    </form>
+    <hr size="20px">
+    <form action="{% url 'pet_filter'%}" method="post">
+        {% csrf_token %}
+        <!--    {{ form.as_p }}-->
+        {% for field in form %}
+        {{ field }}
+        {% endfor %}
+        <br><br>
+        <button type="submit" class="btn btn-outline-warning">show pets</button>
+    </form>
 </div>
+
 {% endblock %}
