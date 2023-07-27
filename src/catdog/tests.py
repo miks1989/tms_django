@@ -10,4 +10,8 @@ class TestCatDogView(TestCase):
         self.assertTemplateUsed(response, template_name='catdog.html')
 
     def test_post_cat(self):
-        response = self.client.post(reverse('catdog'), data=('cat', 'cat'))
+        response = self.client.post(reverse('catdog'),  {'cat': 'true'})
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, template_name='pet.html')
+
+
