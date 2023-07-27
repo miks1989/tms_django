@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 def catdog_view(request):
     if request.method == "GET":
         data = {'form': PetFilterForm()}
-        return render(request, 'pet.html', data)
+        return render(request, 'catdog.html', data)
     if request.method == "POST":
         request.session.set_expiry(30)
         if 'cat' in request.POST:
