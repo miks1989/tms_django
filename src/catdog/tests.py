@@ -14,4 +14,9 @@ class TestCatDogView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name='pet.html')
 
+    def test_post_error(self):
+        with self.assertRaisesMessage(AttributeError, "are you try to hack?"):
+            self.client.post(reverse('catdog'),  {'fuck': 'true'})
+
+
 
